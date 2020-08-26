@@ -43,7 +43,7 @@ namespace MANAGEMENT.Models
             {
                 var connString = _config.GetConnectionString("MGTConnection"); // Your connection string logic here
                 optionsBuilder.UseOracle(connString, b =>
-                b.UseOracleSQLCompatibility("11"));
+                b.UseOracleSQLCompatibility("11"));//MigrationsAssembly("IRRIGATIONAPP").
 
                 //optionsBuilder.UseLazyLoadingProxies();
                 //optionsBuilder.UseOracle("User Id = QUALIFYDLL;Password=q;Data Source = 192.168.1.184:1521/ORCL;");

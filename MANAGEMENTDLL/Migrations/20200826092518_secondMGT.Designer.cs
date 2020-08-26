@@ -10,8 +10,8 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace MANAGEMENTDLL.Migrations
 {
     [DbContext(typeof(mgtDBContext))]
-    [Migration("20200823110520_23082020first")]
-    partial class _23082020first
+    [Migration("20200826092518_secondMGT")]
+    partial class secondMGT
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

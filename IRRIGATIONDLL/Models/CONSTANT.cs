@@ -1,13 +1,13 @@
-﻿namespace IRRIGATIONDLL.Models
+﻿namespace IRRIGATION.Models
 {
     using System;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    [Table("CONSTANTINDEX")]
-    public partial class CONSTANTINDEX : PARENTENTITY
+    [Table("CONSTANT")]
+    public partial class CONSTANT : PARENTENTITY
     {
-        public CONSTANTINDEX() {
+        public CONSTANT() {
             CREATION_DATE = DateTime.Now;
         }
         [Key]

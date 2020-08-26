@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using IRRIGATIONDLL.Models;
+using IRRIGATION.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -28,7 +28,10 @@ namespace IRRIGATION.Models
         }
         #region Indexes
         public virtual DbSet<SETTING> SETTING { get; set; }
-        public virtual DbSet<CONSTANTINDEX> CONSTANTINDEX { get; set; }
+        public virtual DbSet<CONSTANT> CONSTANT { get; set; }
+
+        public virtual DbSet<COMPANY> COMPANY { get; set; }
+        public virtual DbSet<PRODUCT> PRODUCT { get; set; }
         /*public virtual DbSet<TRAINTYP> TRAINTYP { get; set; }
         public virtual DbSet<FLAG> FLAG { get; set; }
         public virtual DbSet<TRAIN> TRAIN { get; set; }
@@ -93,8 +96,8 @@ namespace IRRIGATION.Models
             {
                 var connString = _config.GetConnectionString("DefaultConnection"); // Your connection string logic here
                 optionsBuilder.UseOracle(connString, b =>
-                b.UseOracleSQLCompatibility("11"));
-
+                b.UseOracleSQLCompatibility("11"));//.MigrationsAssembly("IRRIGATIONAPP")
+                optionsBuilder.UseLazyLoadingProxies();
                 //optionsBuilder.UseLazyLoadingProxies();
                 //optionsBuilder.UseOracle("User Id = QUALIFYDLL;Password=q;Data Source = 192.168.1.184:1521/ORCL;");
             }

@@ -29,6 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="IRRIGATIONDLL">
+      <HintPath>..\IRRIGATIONDLL\bin\Debug\netcoreapp2.2\IRRIGATIONDLL.dll</HintPath>
+    </Reference>
     <Reference Include="Kendo.Mvc">
       <HintPath>C:\Users\ASUS\Downloads\Kendo.Mvc.dll</HintPath>
     </Reference>

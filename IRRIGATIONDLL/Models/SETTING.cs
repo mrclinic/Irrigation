@@ -1,4 +1,4 @@
-﻿namespace IRRIGATIONDLL.Models
+﻿namespace IRRIGATION.Models
 {
     using System;
     using System.ComponentModel;
