@@ -18,8 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using IRRIGATION.Models;
 using Microsoft.IdentityModel.Tokens;
-using MANAGEMENT.Models;
-using Microsoft.Extensions.Options;
+
 
 namespace IRRIGATIONAPP
 {
@@ -58,11 +57,11 @@ namespace IRRIGATIONAPP
                     , b =>
 b.UseOracleSQLCompatibility("11")));//.MigrationsAssembly("IRRIGATIONAPP")
 
-            services.AddDbContext<mgtDBContext>(options =>
+            /*services.AddDbContext<mgtDBContext>(options =>
                 options.UseOracle(
                     Configuration.GetConnectionString("MGTConnection")
                     , b =>
- b.UseOracleSQLCompatibility("11")));
+ b.UseOracleSQLCompatibility("11")));*/
             //MigrationsAssembly("IRRIGATIONAPP").
             //.UseOracle(connection_string, options => options
             //.UseOracleSQLCompatibility("11"))

@@ -28,66 +28,22 @@ namespace IRRIGATION.Models
         }
         #region Indexes
         public virtual DbSet<SETTING> SETTING { get; set; }
-        public virtual DbSet<CONSTANT> CONSTANT { get; set; }
-
-        public virtual DbSet<COMPANY> COMPANY { get; set; }
+        public virtual DbSet<CONSTANT> CONSTANT { get; set; }        
         public virtual DbSet<PRODUCT> PRODUCT { get; set; }
-        /*public virtual DbSet<TRAINTYP> TRAINTYP { get; set; }
-        public virtual DbSet<FLAG> FLAG { get; set; }
-        public virtual DbSet<TRAIN> TRAIN { get; set; }
-        public virtual DbSet<EQUALIZER> EQUALIZER { get; set; }
-        public virtual DbSet<TRAINCOND> TRAINCOND { get; set; }
-        public virtual DbSet<SPECDET> SPECDET { get; set; }
+        public virtual DbSet<GOVERNORATE> GOVERNORATE { get; set; }
+        public virtual DbSet<AREA> AREA { get; set; }
+        public virtual DbSet<ZONE> ZONE { get; set; }
+        public virtual DbSet<SIDE> SIDE { get; set; }
+        public virtual DbSet<VILLAGE> VILLAGE { get; set; }
+        public virtual DbSet<BRANCH> BRANCH { get; set; }
+        public virtual DbSet<CIRCLE> CIRCLE { get; set; }
+        public virtual DbSet<SECTION> SECTION { get; set; }
+        public virtual DbSet<AGRIDIR> AGRIDIR { get; set; }
+        public virtual DbSet<AGRIDEP> AGRIDEP { get; set; }
+        public virtual DbSet<AGRISEC> AGRISEC { get; set; }
+        public virtual DbSet<INDIC> INDIC { get; set; }
+        public virtual DbSet<COMPANY> COMPANY { get; set; }
 
-        public virtual DbSet<SSPECDET> SSPECDET { get; set; }
-
-        public virtual DbSet<NOMINATIONSUNITS> NOMINATIONSUNITS { get; set; }
-        public virtual DbSet<NOMINATIONS> NOMINATIONS { get; set; }
-
-        public virtual DbSet<NOMINATIONSINFO> NOMINATIONSINFO { get; set; }
-        public virtual DbSet<APPROVAL_ENTITY_TYPE> APPROVAL_ENTITY_TYPE { get; set; }
-        public virtual DbSet<APPROVAL_ENTITY_OBJECT> APPROVAL_ENTITY_OBJECT { get; set; }
-
-        public virtual DbSet<APPROVAL_USERS> APPROVAL_USERS { get; set; }
-
-        public virtual DbSet<CONFIG> CONFIG { get; set; }
-
-        public virtual DbSet<TRAINRESULT> TRAINRESULT { get; set; }
-        public virtual DbSet<TRAINRESULTCODE> TRAINRESULTCODE { get; set; }
-
-        public virtual DbSet<CONFIGDB> CONFIGDB { get; set; }*/
-
-        /*
-        public virtual DbSet<MLAK_LIST> MLAK_LIST { get; set; }
-        public virtual DbSet<NAMEDLIST_ORDER> NAMEDLIST_ORDER { get; set; }
-        public virtual DbSet<NOTESHOW> NOTESHOW { get; set; }
-        public virtual DbSet<PLANBOOK> PLANBOOK { get; set; }
-        public virtual DbSet<SISSIONTYP> SISSIONTYP { get; set; }
-        public virtual DbSet<SISSION> SISSION { get; set; }
-        public virtual DbSet<MISSIONSLIST> MISSIONSLIST { get; set; }
-        public virtual DbSet<DISPATCH_OREDRTYPE> DISPATCH_OREDRTYPE { get; set; }
-        public virtual DbSet<QUALIFYTYP> QUALIFYTYP { get; set; }
-
-        public virtual DbSet<QUALIFY_TYP> QUALIFY_TYP { get; set; }
-        public virtual DbSet<CERTIFICATES> CERTIFICATES { get; set; }
-
-
-
-
-        public virtual DbSet<EMPLOYEE_CLASS> EMPLOYEE_CLASS { get; set; }
-        public virtual DbSet<RANK_CLASS> RANK_CLASS { get; set; }
-
-        public virtual DbSet<KASHF> KASHF { get; set; }
-        public virtual DbSet<RANK> RANK { get; set; }
-        public virtual DbSet<DRAFT> DRAFT { get; set; }
-        public virtual DbSet<DRAFT_TYPE> DRAFT_TYPE { get; set; }
-
-        public virtual DbSet<MILITARY_UNIT> MILITARY_UNIT { get; set; }
-        public virtual DbSet<SPECIALIZATION> SPECIALIZATION { get; set; }
-        public virtual DbSet<SUBSPECIALIZATION> SUBSPECIALIZATION { get; set; }
-        public virtual DbSet<SUBSPECIALIZATION_DETAILS> SUBSPECIALIZATION_DETAILS { get; set; }
-
-        */
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -4968,21 +4968,6 @@
         "runtime": {
           "bin/placeholder/IRRIGATIONDLL.dll": {}
         }
-      },
-      "MANAGEMENTDLL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Proxies": "2.2.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.4",
-          "Oracle.EntityFrameworkCore": "2.19.30"
-        },
-        "compile": {
-          "bin/placeholder/MANAGEMENTDLL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MANAGEMENTDLL.dll": {}
-        }
       }
     }
   },
@@ -13619,17 +13604,11 @@
       "type": "project",
       "path": "../IRRIGATIONDLL/IRRIGATIONDLL.csproj",
       "msbuildProject": "../IRRIGATIONDLL/IRRIGATIONDLL.csproj"
-    },
-    "MANAGEMENTDLL/1.0.0": {
-      "type": "project",
-      "path": "../MANAGEMENTDLL/MANAGEMENTDLL.csproj",
-      "msbuildProject": "../MANAGEMENTDLL/MANAGEMENTDLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "IRRIGATIONDLL >= 1.0.0",
-      "MANAGEMENTDLL >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -13670,9 +13649,6 @@
           "projectReferences": {
             "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONDLL\\IRRIGATIONDLL.csproj": {
               "projectPath": "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONDLL\\IRRIGATIONDLL.csproj"
-            },
-            "D:\\HIAST\\Applications\\Irrigation\\rep\\MANAGEMENTDLL\\MANAGEMENTDLL.csproj": {
-              "projectPath": "D:\\HIAST\\Applications\\Irrigation\\rep\\MANAGEMENTDLL\\MANAGEMENTDLL.csproj"
             }
           }
         }

@@ -45,7 +45,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IRRIGATIONDLL\IRRIGATIONDLL.csproj" />
-    <ProjectReference Include="..\MANAGEMENTDLL\MANAGEMENTDLL.csproj" />
   </ItemGroup>
 
 </Project>

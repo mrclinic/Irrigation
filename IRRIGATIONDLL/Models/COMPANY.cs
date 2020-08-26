@@ -32,10 +32,11 @@
         public decimal STRId { get; set; }
         [ForeignKey("STRId")]
         public virtual CONSTANT STRUCTTYPE { get; set; }
-        [Required]
-        [StringLength(100)]
         [DisplayName("المحافظة")]
-        public string GOVERNORATE { get; set; }
+
+        public decimal GOVId { get; set; }
+        [ForeignKey("GOVId")]
+        public virtual GOVERNORATE GOVERNORATE { get; set; }
         [Required]
         [StringLength(300)]
         [DisplayName("العنوان")]
