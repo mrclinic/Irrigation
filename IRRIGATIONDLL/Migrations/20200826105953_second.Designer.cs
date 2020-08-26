@@ -10,7 +10,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace IRRIGATIONDLL.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20200826103203_second")]
+    [Migration("20200826105953_second")]
     partial class second
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("AGRIDIRId");
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -43,7 +45,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -59,7 +63,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -74,7 +80,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -92,7 +100,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("AGRIDIRId");
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -109,7 +119,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("SIDEId");
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.Property<decimal>("ZONEId");
 
@@ -133,7 +145,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -148,7 +162,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -162,7 +178,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -181,7 +199,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -197,7 +217,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("BRANCHId");
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -216,7 +238,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -238,7 +262,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("ADJId");
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<string>("FAX")
                         .HasMaxLength(30);
@@ -262,7 +288,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("STRId");
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -282,7 +310,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<string>("NAME")
                         .IsRequired()
@@ -299,7 +329,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -311,7 +343,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<string>("NAME")
                         .IsRequired()
@@ -324,7 +358,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -338,7 +374,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("AGRISECId");
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -355,7 +393,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("SIDEId");
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.Property<decimal>("VILId");
 
@@ -381,7 +421,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("KINDId");
 
@@ -392,7 +434,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<string>("NOTE")
                         .HasMaxLength(500);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -410,7 +454,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("CIRCLEId");
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -429,7 +475,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
@@ -447,7 +495,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<string>("NAME")
                         .IsRequired()
@@ -461,7 +511,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.Property<string>("VALUE")
                         .IsRequired()
@@ -477,7 +529,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -492,7 +546,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.Property<decimal>("ZONEId");
 
@@ -510,7 +566,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -527,7 +585,9 @@ namespace IRRIGATIONDLL.Migrations
 
                     b.Property<decimal>("SIDEId");
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.Property<decimal>("ZONEId");
 
@@ -547,7 +607,9 @@ namespace IRRIGATIONDLL.Migrations
                     b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CREATION_DATE");
+                    b.Property<decimal?>("CREATE_USERNB");
+
+                    b.Property<DateTime?>("CREATION_DATE");
 
                     b.Property<decimal>("GOVId");
 
@@ -562,7 +624,9 @@ namespace IRRIGATIONDLL.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<decimal>("USERNB");
+                    b.Property<DateTime?>("UPDATE_DATE");
+
+                    b.Property<decimal?>("UPDATE_USERNB");
 
                     b.HasKey("Id");
 
