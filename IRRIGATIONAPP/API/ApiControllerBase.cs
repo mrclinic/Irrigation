@@ -1,15 +1,13 @@
-﻿using IRRIGATION.Models;
+﻿using IRRIGATIONDLL.Models;
 using Microsoft.AspNetCore.Mvc;
-
-
-namespace IRRIGATION.API
+namespace IRRIGATIONAPP.API
 {
 
     //[Authorize(Policy = "ApiUser")]
     //[ApiController]
     //[Route("api/[controller]/[action]")]
     //[ApiUserDBToken]
-    //[Authorize(Policy = "ApiUserDBToken" , Roles ="admin")]
+    //[Authorize(Policy = "ApiUserDBToken", Roles = "admin")]
 
     //[Authorize]
     public class ApiControllerBase : Controller

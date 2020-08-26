@@ -5,27 +5,27 @@
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    [Table("AGRIDEP")]
-    public partial class AGRIDEP : BASEUNIT
+    [Table("BBRANCH")]
+    public partial class BBRANCH : BASEUNIT
     {
-        //دائرة زراعة  
-        //Agriculture Department
-        public AGRIDEP() {
+        //فروع المصرف 
+        public BBRANCH() {
             CREATION_DATE = DateTime.Now;
-            AGRISEC = new HashSet<AGRISEC>();
         }
+        [Required]
+        [StringLength(200)]
+        [DisplayName("عنوان الفرع")]
+        public string ADDRESS { get; set; }
+
+        [Required]
+        [StringLength(500)]
+        [DisplayName("معلومات الاتصال")]
+        public string CONTACTINFO { get; set; }
+
         [DisplayName("المحافظة")]
 
         public decimal GOVId { get; set; }
         [ForeignKey("GOVId")]
         public virtual GOVERNORATE GOVERNORATE { get; set; }
-
-        [DisplayName("مديرية زراعة")]
-
-        public decimal AGRIDIRId { get; set; }
-        [ForeignKey("AGRIDIRId")]
-        public virtual AGRIDIR AGRIDIR { get; set; }
-
-        public virtual ICollection<AGRISEC> AGRISEC { get; set; }
     }
 }

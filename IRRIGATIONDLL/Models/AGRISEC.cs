@@ -1,4 +1,4 @@
-﻿namespace IRRIGATION.Models
+﻿namespace IRRIGATIONDLL.Models
 {
     using System;
     using System.Collections.Generic;

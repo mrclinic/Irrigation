@@ -1,9 +1,7 @@
-﻿namespace IRRIGATION.Models
+﻿namespace IRRIGATIONDLL.Models
 {
     using System;
     using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
     public partial class PARENTENTITY
     {
         public PARENTENTITY() {

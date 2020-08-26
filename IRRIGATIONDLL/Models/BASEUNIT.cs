@@ -1,6 +1,5 @@
-﻿namespace IRRIGATION.Models
+﻿namespace IRRIGATIONDLL.Models
 {
-    using IRRIGATION.Models;
     using System;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;

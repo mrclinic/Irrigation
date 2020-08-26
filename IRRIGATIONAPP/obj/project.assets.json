@@ -4953,21 +4953,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "IRRIGATIONDLL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Proxies": "2.2.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.4",
-          "Oracle.EntityFrameworkCore": "2.19.30"
-        },
-        "compile": {
-          "bin/placeholder/IRRIGATIONDLL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IRRIGATIONDLL.dll": {}
-        }
       }
     }
   },
@@ -13599,18 +13584,13 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "IRRIGATIONDLL/1.0.0": {
-      "type": "project",
-      "path": "../IRRIGATIONDLL/IRRIGATIONDLL.csproj",
-      "msbuildProject": "../IRRIGATIONDLL/IRRIGATIONDLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "IRRIGATIONDLL >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.EntityFrameworkCore.Proxies >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
       "Oracle.EntityFrameworkCore >= 2.19.30",
@@ -13646,11 +13626,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONDLL\\IRRIGATIONDLL.csproj": {
-              "projectPath": "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONDLL\\IRRIGATIONDLL.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -13670,6 +13646,10 @@
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Proxies": {
             "target": "Package",
             "version": "[2.2.0, )"
           },

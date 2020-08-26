@@ -1,14 +1,18 @@
-﻿namespace IRRIGATION.Models
+﻿namespace IRRIGATIONDLL.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     [Table("COMPANY")]
     public partial class COMPANY : PARENTENTITY
     {
+        //الشركة
         public COMPANY() {
             CREATION_DATE = DateTime.Now;
+            SANCTION = new HashSet<SANCTION>();
+            DECISION = new HashSet<DECISION>();
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,7 +23,6 @@
         [StringLength(300)]
         [DisplayName("اسم الشركة ")]
         public string NAME { get; set; }
-        //CONSTANTINDEX
 
         [DisplayName("صفة الشركة ")]
 
@@ -62,5 +65,9 @@
         [StringLength(300)]
         [DisplayName("ملاحظات")]
         public string NOTE { get; set; }
+
+        public ICollection<SANCTION> SANCTION { get; set; }
+
+        public ICollection<DECISION> DECISION { get; set; }
     }
 }

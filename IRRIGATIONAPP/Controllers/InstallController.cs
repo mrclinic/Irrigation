@@ -1,83 +1,130 @@
-﻿//using System.Linq;
-//using Microsoft.AspNetCore.Mvc;
-////using ERPAuthAPI.Models;
-////using ERPAuthAPI.ViewModels;
-//using Microsoft.AspNetCore.Mvc.Infrastructure;
-//using QUALIFYAPP.Auth;
-//using QUALIFYDLL.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using IRRIGATIONDLL.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
-//namespace QUALIFYAPP.Controllers
-//{
-//    public class InstallController : Controller
-//    {
-//        private readonly IActionDescriptorCollectionProvider _provider;
-//        private readonly AppDBContext _db;
 
-//        public InstallController(IActionDescriptorCollectionProvider provider, AppDBContext db)
-//        {
-//            _provider = provider;
-//            _db = db;
-//        }
+namespace IRRIGATIONAPP.Controllers
+{
+    public class InstallController : Controller
+    {
+        private readonly IActionDescriptorCollectionProvider _provider;
+        private readonly AppDBContext _db;
 
-//        public IActionResult ReadRoutes()
-//        {
+        public InstallController(IActionDescriptorCollectionProvider provider, AppDBContext db)
+        {
+            _provider = provider;
+            _db = db;
+        }
 
-//            var routes = _provider.ActionDescriptors.Items.Select(x => new {
-//                Action = x.RouteValues["Action"],
-//                Controller = x.RouteValues["Controller"],
-//                Area = x.RouteValues["Area"],
-//                //Url = x.RouteValues["URL"],
-//                //Name = x.AttributeRouteInfo.Name,
-//                //Template = x.AttributeRouteInfo.Template
-//            }).ToList();
+        public IActionResult ReadRoutes()
+        {
 
-//            return Ok(routes);
-//        }
+            var routes = _provider.ActionDescriptors.Items.Select(x => new
+            {
+                Action = x.RouteValues["Action"],
+                Controller = x.RouteValues["Controller"],
+                Area = x.RouteValues["Area"],
+                //Url = x.RouteValues["URL"],
+                //Name = x.AttributeRouteInfo.Name,
+                //Template = x.AttributeRouteInfo.Template
+            }).ToList();
 
-//        public IActionResult UpdatePermissions()
-//        {
+            return Ok(routes);
+        }
 
-//            var routes = _provider.ActionDescriptors.Items.Select(x => new {
-//                Action = x.RouteValues["Action"],
-//                Controller = x.RouteValues["Controller"],
-//                Area = x.RouteValues["Area"],
-//                grant = x.FilterDescriptors.Where(a => a.Filter is Granted).Any(),
-//                Name = x.FilterDescriptors.Where(a => a.Filter is DisplayActionName),
-//                Name1 = x.FilterDescriptors.Where(a => a.Filter is DisplayActionName).Any(),
-//                //Url = x.RouteValues["URL"],
-//                //Name = x.AttributeRouteInfo.Name,
-//                //t = x.DisplayName,
-//                //t = x.DisplayName ,//!= null ? x.DisplayName : x.RouteValues["Action"],
-//                //Template = x.AttributeRouteInfo.Template
-//            }).Where(a => a.grant == false && a.Name1 == true).ToList();
+        public IActionResult InitialConstanIndex()
+        {
 
-//            string program = AuthorizeActionPermissionsHandler.program;
-
-//            //check group
-//            var group = _db.PermissionGroups.Where(x => x.Name == program).FirstOrDefault();
-//            if (group == null)
-//            {
-//                _db.PermissionGroups.Add(new PermissionGroup() { Name = program });
-//                _db.SaveChanges();
-//                group = _db.PermissionGroups.Where(x => x.Name == program).FirstOrDefault();
-//            }
-
-//            foreach (var route in routes)
-//            {
-//                DisplayActionName ttt = (DisplayActionName)route.Name.FirstOrDefault().Filter;
-//                string permstr1 = (ttt != null ? ttt.DisplayName : "");
-//                string permstr = program + "_" + route.Controller + "_" + route.Action;
-//                //find perms
-//                var perms = _db.Permissions.Where(x => x.Name == permstr && x.GroupId == group.Id).FirstOrDefault();
-//                if (perms == null)
-//                {
-//                    _db.Permissions.Add(new AppPermission() { Name = permstr, DisplayName = permstr1, GroupId = group.Id });
-//                }
-//            }
-
-//            _db.SaveChanges();
-
-//            return Ok("updated..");
-//        }
-//    }
-//}
+            //2.	صفة الشركة (شركة، ورشة).
+            List<CONSTANT> comapnyAdiectives = new List<CONSTANT>() {
+            new CONSTANT() {
+                NAME = "شركة",
+                TYPE ="COMPANY_ADJECTIVE",
+                ORDER = "1"
+            },
+            new CONSTANT() {
+                NAME = "ورشة",
+                TYPE ="COMPANY_ADJECTIVE",
+                ORDER = "2"
+            }
+            };
+            //3.	نوع السجل (تجاري، صناعي، نقابة حرفيين).
+            List<CONSTANT> recordTypes = new List<CONSTANT>() {
+            new CONSTANT() {
+                NAME = "تجاري",
+                TYPE ="RECORD_TYPE",
+                ORDER = "1"
+            },
+            new CONSTANT() {
+                NAME = "صناعي",
+                TYPE ="RECORD_TYPE",
+                ORDER = "2"
+            },
+            new CONSTANT() {
+                NAME = "نقابة حرفيين",
+                TYPE ="RECORD_TYPE",
+                ORDER = "3"
+            }
+            };
+            //7.	المنتجات بأنواعها (pe, pvc, metal).
+            List<CONSTANT> productTypes = new List<CONSTANT>() {
+            new CONSTANT() {
+                NAME = "pe",
+                TYPE ="PROJECT_TYPE",
+                ORDER = "1"
+            },
+            new CONSTANT() {
+                NAME = "pvc",
+                TYPE ="PROJECT_TYPE",
+                ORDER = "2"
+            },
+            new CONSTANT() {
+                NAME = "metal",
+                TYPE ="PROJECT_TYPE",
+                ORDER = "3"
+            }
+            };
+            //8.	حالة الشركة: محرومة أم لا.
+            List<CONSTANT> comapnyStatus = new List<CONSTANT>() {
+            new CONSTANT() {
+                NAME = "نعم",
+                TYPE ="COMPANY_STATUS",
+                ORDER = "1"
+            },
+            new CONSTANT() {
+                NAME = "لا",
+                TYPE ="COMPANY_STATUS",
+                ORDER = "2"
+            }
+            };
+            try
+            {
+                _db.CONSTANT.AddRange(comapnyAdiectives);
+                _db.CONSTANT.AddRange(recordTypes);
+                _db.CONSTANT.AddRange(productTypes);
+                _db.CONSTANT.AddRange(comapnyStatus);
+                _db.SaveChanges();
+                return Json(new
+                {
+                    Data = new { msg = "SUCCESS" },
+                    Total = "0",
+                    AggregateResults = "",
+                    Errors = new { String.Empty }
+                });
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    Data = new[] { String.Empty },
+                    Total = "0",
+                    AggregateResults = "",
+                    Errors = new { msg = new { errors = new[] { e.Message } } }
+                });
+            }
+        }
+    }
+}

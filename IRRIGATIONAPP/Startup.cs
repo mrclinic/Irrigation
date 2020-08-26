@@ -16,9 +16,8 @@ using IRRIGATIONAPP.Auth;
 using Newtonsoft.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using IRRIGATION.Models;
 using Microsoft.IdentityModel.Tokens;
-
+using IRRIGATIONDLL.Models;
 
 namespace IRRIGATIONAPP
 {

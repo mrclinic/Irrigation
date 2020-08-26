@@ -1,14 +1,9 @@
-﻿using System;
-using System.Linq;
-using IRRIGATION.Models;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
 
-namespace IRRIGATION.Models
+namespace IRRIGATIONDLL.Models
 {
     public partial class AppDBContext : DbContext
     {
@@ -43,6 +38,11 @@ namespace IRRIGATION.Models
         public virtual DbSet<AGRISEC> AGRISEC { get; set; }
         public virtual DbSet<INDIC> INDIC { get; set; }
         public virtual DbSet<COMPANY> COMPANY { get; set; }
+
+        public virtual DbSet<SANCTION> SANCTION { get; set; }
+        public virtual DbSet<DECISION> DECISION { get; set; }
+        public virtual DbSet<CLASSY> CLASSY { get; set; }
+        public virtual DbSet<BBRANCH> BBRANCH { get; set; }
 
         #endregion
 
