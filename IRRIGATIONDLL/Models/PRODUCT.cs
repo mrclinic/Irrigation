@@ -22,8 +22,8 @@
 
         [DisplayName("نوع المنتج")]
 
-        public decimal KINDId { get; set; }
-        [ForeignKey("KINDId")]
+        public decimal PKId { get; set; }
+        [ForeignKey("PKId")]
         public virtual CONSTANT PRODUCTKIND { get; set; }
 
         [StringLength(500)]

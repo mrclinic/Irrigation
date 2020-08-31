@@ -22,8 +22,10 @@ namespace IRRIGATIONDLL.Models
             Database.EnsureCreated();
         }
         #region Indexes
+
+        public virtual DbSet<FINANCE> FINANCE { get; set; }
         public virtual DbSet<SETTING> SETTING { get; set; }
-        public virtual DbSet<CONSTANT> CONSTANT { get; set; }        
+        public virtual DbSet<CONSTANT> CONSTANT { get; set; }
         public virtual DbSet<PRODUCT> PRODUCT { get; set; }
         public virtual DbSet<GOVERNORATE> GOVERNORATE { get; set; }
         public virtual DbSet<AREA> AREA { get; set; }
@@ -38,11 +40,28 @@ namespace IRRIGATIONDLL.Models
         public virtual DbSet<AGRISEC> AGRISEC { get; set; }
         public virtual DbSet<INDIC> INDIC { get; set; }
         public virtual DbSet<COMPANY> COMPANY { get; set; }
-
         public virtual DbSet<SANCTION> SANCTION { get; set; }
         public virtual DbSet<DECISION> DECISION { get; set; }
         public virtual DbSet<CLASSY> CLASSY { get; set; }
         public virtual DbSet<BBRANCH> BBRANCH { get; set; }
+        public virtual DbSet<CREDIT> CREDIT { get; set; }
+        public virtual DbSet<LOGACT> LOGACT { get; set; }
+        public virtual DbSet<LOGERR> LOGERR { get; set; }
+        public virtual DbSet<BENEFICIAL> BENEFICIAL { get; set; }
+        public virtual DbSet<DOCTYPES> DOCTYPES { get; set; }
+        public virtual DbSet<DOCS> DOCS { get; set; }
+        public virtual DbSet<LOANORDER> LOANORDER { get; set; }
+        public virtual DbSet<SCANPROCESS> SCANPROCESS { get; set; }
+
+        public virtual DbSet<FINCOND> FINCOND { get; set; }
+
+
+
+        public virtual DbSet<PERMISSION> PERMISSION { get; set; }
+        public virtual DbSet<ROLE> ROLE { get; set; }
+        public virtual DbSet<USER> USER { get; set; }
+
+        public virtual DbSet<ROLEPERMISSIONS> ROLEPERMISSIONS { get; set; }
 
         #endregion
 
@@ -53,7 +72,7 @@ namespace IRRIGATIONDLL.Models
                 var connString = _config.GetConnectionString("DefaultConnection"); // Your connection string logic here
                 optionsBuilder.UseOracle(connString, b =>
                 b.UseOracleSQLCompatibility("11"));//.MigrationsAssembly("IRRIGATIONAPP")
-                optionsBuilder.UseLazyLoadingProxies();
+                //optionsBuilder.UseLazyLoadingProxies();
                 //optionsBuilder.UseLazyLoadingProxies();
                 //optionsBuilder.UseOracle("User Id = QUALIFYDLL;Password=q;Data Source = 192.168.1.184:1521/ORCL;");
             }
