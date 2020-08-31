@@ -19,6 +19,6 @@
         [ForeignKey("GOVId")]
         public virtual GOVERNORATE GOVERNORATE { get; set; }
 
-        //public virtual ICollection<SIDE> SIDE { get; set; }
+        public virtual ICollection<SIDE> SIDE { get; set; }
     }
 }
