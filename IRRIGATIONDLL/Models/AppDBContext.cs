@@ -63,6 +63,15 @@ namespace IRRIGATIONDLL.Models
 
         public virtual DbSet<ROLEPERMISSIONS> ROLEPERMISSIONS { get; set; }
 
+        public virtual DbSet<BILLITEMS> BILLITEMS { get; set; }
+        public virtual DbSet<BILLS> BILLS { get; set; }
+        public virtual DbSet<ITEMCOMPANY> ITEMCOMPANY { get; set; }
+        public virtual DbSet<ITEMPRICE> ITEMPRICE { get; set; }
+        public virtual DbSet<ITEMS> ITEMS { get; set; }
+        public virtual DbSet<LASERCOMMIT> LASERCOMMIT { get; set; }
+        public virtual DbSet<LASERORDER> LASERORDER { get; set; }
+        public virtual DbSet<ORDERSTATUS> ORDERSTATUS { get; set; }
+
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
