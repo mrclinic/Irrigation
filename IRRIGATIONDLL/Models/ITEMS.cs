@@ -16,10 +16,12 @@
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف)")]
         public decimal Id { get; set; }
+
         [DisplayName("الاسم)")]
         public string NAME { get; set; }
 
-
+        [DisplayName("الرمز)")]
+        public string COD { get; set; }
 
 
         [DisplayName("مواصفات)")]
@@ -28,5 +30,11 @@
 
         [DisplayName("ملاحظات)")]
         public string NOTES { get; set; }
+
+
+        [DisplayName("تصنيف المادة")]
+        public decimal CLASSYId { get; set; }
+        [ForeignKey("CLASSYId")]
+        public virtual CLASSY CLASSY { get; set; }
     }
 }

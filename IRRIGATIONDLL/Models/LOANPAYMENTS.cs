@@ -5,22 +5,28 @@
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    [Table("BILLS")]
-    public partial class BILLS : PARENTENTITY
+    [Table("LOANPAYMENTS")]
+    public partial class LOANPAYMENTS : PARENTENTITY
     {
-        //الفواتير
-        public BILLS() {
+        //أقساط القروض
+        public LOANPAYMENTS() {
             
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف")]
         public decimal Id { get; set; }
-        [DisplayName("رقم")]
-        public string BILLNO { get; set; }
+        [DisplayName("رقم الدفعة")]
+        public string PAYMENTNO { get; set; }
 
         [DisplayName("تاريخ")]
-        public DateTime BILLDATE { get; set; }
+        public DateTime PAYMENTDATE { get; set; }
+
+        [DisplayName("رقم القسط")]
+        public string NO { get; set; }
+
+        [DisplayName("تاريخ القسط")]
+        public DateTime DAT { get; set; }
 
         public decimal BENEFICIALId { get; set; }
         [ForeignKey("BENEFICIALId")]
@@ -30,8 +36,8 @@
         public decimal LOANORDERId { get; set; }
         [ForeignKey("LOANORDERId")]
         public virtual LOANORDER LOANORDER { get; set; }
-        [DisplayName("قيمة الفاتورة")]
-        public decimal TOTALVAL { get; set; }
+        [DisplayName("قيمة الدفعة")]
+        public decimal PAYMENTVAL { get; set; }
 
 
     }

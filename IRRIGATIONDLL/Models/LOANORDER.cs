@@ -95,6 +95,8 @@
        //عدد الوثائق المرفقة
         public decimal DOCSCOUNT { get; set; }
 
+        [DisplayName("قيمة القرض")]
+        public decimal AMOUNT { get; set; }
 
     }
 }

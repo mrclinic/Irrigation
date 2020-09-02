@@ -19,16 +19,11 @@
         [DisplayName("الربع")]
         public int QUARTER { get; set; }
 
+        [DisplayName("تاريخ النشرة)")]
+        public DateTime DAT { get; set; }
+
         [DisplayName("السعر)")]
-        public double PRICE { get; set; }
-
-        [DisplayName("المادة)")]
-        public decimal ITEMId { get; set; }
-        [ForeignKey("ITEMId")]
+        public double PRICE { get; set; }        
         public virtual ITEMS ITEMS { get; set; }
-
-      
-
-
     }
 }
