@@ -22,7 +22,7 @@
         [ForeignKey("GOVId")]
         public virtual GOVERNORATE GOVERNORATE { get; set; }
 
-        [DisplayName("المنطقة")]
+        [DisplayName("الفروع")]
 
         public decimal BRANCHId { get; set; }
         [ForeignKey("BRANCHId")]

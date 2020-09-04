@@ -4,7 +4,7 @@
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    public partial class HEADENTITY
+    public partial class HEADENTITY : PARENTENTITY
     {
         [Required]
         [StringLength(100)]

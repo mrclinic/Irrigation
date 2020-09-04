@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace IRRIGATIONDLL.Models
 {
     [Table("USER")]
-    public partial class USER
+    public partial class USER : PARENTENTITY
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -6,7 +6,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     [Table("DOCTYPES")]
-    public partial class DOCTYPES 
+    public partial class DOCTYPES : PARENTENTITY
     {
         //أنواع الاستمارات
         public DOCTYPES() {

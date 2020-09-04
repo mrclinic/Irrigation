@@ -5,37 +5,24 @@
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    [Table("CREDIT")]
-    public partial class CREDIT : PARENTENTITY
+    [Table("CREDITHISTORY")]
+    public partial class CREDITHISTORY : PARENTENTITY
     {
-        //الاعتمادات 
-        public CREDIT() {
+        //تفاصيل الاعتمادات
+        public CREDITHISTORY() {
             CREATION_DATE = DateTime.Now;
-            CREDITHISTORY = new HashSet<CREDITHISTORY>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [DisplayName("رقم معرف الاعتمادات )")]
+        [DisplayName("رقم معرف تفاصيل الاعتمادات )")]
         public decimal Id { get; set; }
 
         [DisplayName("السنة")]
         public int CYEAR { get; set; }
 
-        [DisplayName("قيمة الاعتماد")]
+        [DisplayName("قيمة تفصيل الاعتماد")]
         public decimal CREDITVAL { get; set; }
-
-
-        [Required]
-        [StringLength(100)]
-        [DisplayName("المساحة المخططة")]
-        public string PLANAREA { get; set; }
-
-
-        [Required]
-        [StringLength(100)]
-        [DisplayName("المساحة المنفذة")]
-        public string ACTUALAREA { get; set; }
 
         [DisplayName("المبالغ الفعلية")]
         public decimal ACTUALVAL { get; set; }
@@ -46,15 +33,21 @@
         [ForeignKey("GOVId")]
         public virtual GOVERNORATE GOVERNORATE { get; set; }
 
-        [DisplayName("الفرع")]
-        public decimal BRAId { get; set; }
-        [ForeignKey("BRAId")]
-        public virtual BRANCH BRANCH { get; set; }
+        [DisplayName("الفرع المصدر")]
+        public decimal SRCBRAId { get; set; }
+        [ForeignKey("SRCBRAId")]
+        public virtual BRANCH SRCBRANCH { get; set; }
+        [DisplayName("الفرع الوجهة")]
+        public decimal DSTBRAId { get; set; }
+        [ForeignKey("DSTBRAId")]
+        public virtual BRANCH DSTBRANCH { get; set; }
+        [DisplayName("الاعتماد الأساسي")]
+        public decimal CREDITId { get; set; }
+        [ForeignKey("CREDITId")]
+        public virtual CREDIT CREDIT { get; set; }
 
         [StringLength(500)]
         [DisplayName("ملاحظات")]
         public string NOTE { get; set; }
-
-        public virtual ICollection<CREDITHISTORY> CREDITHISTORY { get; set; }
     }
 }

@@ -28,6 +28,7 @@
         [DisplayName("تاريخ القسط")]
         public DateTime DAT { get; set; }
 
+        [DisplayName("المستفيد")]
         public decimal BENEFICIALId { get; set; }
         [ForeignKey("BENEFICIALId")]
         public virtual BENEFICIAL BENEFICIAL { get; set; }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace IRRIGATIONDLL.Models
 {
     [Table("DOCS")]
-    public partial class DOCS
+    public partial class DOCS : PARENTENTITY
     {
         // الوثائق المرفقة
         public DOCS() {

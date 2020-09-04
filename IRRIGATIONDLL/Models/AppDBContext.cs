@@ -72,6 +72,21 @@ namespace IRRIGATIONDLL.Models
         public virtual DbSet<LASERORDER> LASERORDER { get; set; }
         public virtual DbSet<ORDERSTATUS> ORDERSTATUS { get; set; }
 
+
+        //04/09/2020
+        public virtual DbSet<ITEMATTRIBUTE> ITEMATTRIBUTE { get; set; }
+
+        public virtual DbSet<LOANPAYMENTS> LOANPAYMENTS { get; set; }
+
+        public virtual DbSet<ATTRIBUTES> ATTRIBUTES { get; set; }
+
+        public virtual DbSet<CREDITHISTORY> CREDITHISTORY { get; set; }
+
+        public virtual DbSet<ENTRY> ENTRY { get; set; }
+
+        public virtual DbSet<ENTRYDETAILS> ENTRYDETAILS { get; set; }
+
+        public virtual DbSet<ACCBRANCHMATCH> ACCBRANCHMATCH { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

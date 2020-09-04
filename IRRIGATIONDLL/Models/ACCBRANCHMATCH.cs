@@ -6,27 +6,32 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     [Table("ACCBRANCHMATCH")]
-    public partial class ACCBRANCHMATCH : BASEUNIT
+    public partial class ACCBRANCHMATCH : PARENTENTITY
     {
         // مطابقة حساب فرع مصرف
         //Agriculture Directorate
         public ACCBRANCHMATCH() {
             CREATION_DATE = DateTime.Now;
         }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("رقم معرف)")]
+        public decimal Id { get; set; }
         [DisplayName("فروع المصرف")]
         public decimal BBRANCHId { get; set; }
         [ForeignKey("BBRANCHId")]
         public virtual BBRANCH BBRANCH { get; set; }
 
-        [DisplayName("حساب المصرف")]
         [Required]
-        public string ACCId { get; set; }
+        [StringLength(500)]
+        [DisplayName("اسم الحساب")]
+        public string AccountNAME { get; set; }
+        [Required]
+        [StringLength(200)]
+        [DisplayName("رقم الحساب")]
 
-        [DisplayName("الشخص الذي قام بالمطابقة مع المصرف")]
+        public string AccountNUM { get; set; }
 
-        public decimal USERId { get; set; }
-        [ForeignKey("USERId")]
-        public virtual USER USER { get; set; }
         [DisplayName("تاريخ المطابقة")]
         public DateTime MATCHDATE { get; set; }
     }

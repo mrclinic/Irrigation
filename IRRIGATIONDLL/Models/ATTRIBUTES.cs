@@ -8,7 +8,7 @@
     [Table("ATTRIBUTES")]
     public partial class ATTRIBUTES : PARENTENTITY
     {
-        //المواد
+        //محددات المادة
         public ATTRIBUTES() {
             
         }

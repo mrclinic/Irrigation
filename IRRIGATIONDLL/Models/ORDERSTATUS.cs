@@ -29,8 +29,5 @@
 
         [ForeignKey("ORDERTYP")]
         public virtual CONSTANT ORDER { get; set; }
-
-
-
     }
 }

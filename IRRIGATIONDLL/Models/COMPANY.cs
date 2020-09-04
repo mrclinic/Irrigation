@@ -21,10 +21,10 @@
 
         [Required]
         [StringLength(300)]
-        [DisplayName("اسم الشركة ")]
+        [DisplayName("اسم الشركة")]
         public string NAME { get; set; }
 
-        [DisplayName("صفة الشركة ")]
+        [DisplayName("صفة الشركة")]
 
         public decimal ADJId { get; set; }
         [ForeignKey("ADJId")]
@@ -53,7 +53,7 @@
         [StringLength(30)]
         public string MOBILE { get; set; }
 
-        [DisplayName("رقم الهاتف/فاكس")]
+        [DisplayName("رقم فاكس")]
         [StringLength(30)]
         public string FAX { get; set; }
 

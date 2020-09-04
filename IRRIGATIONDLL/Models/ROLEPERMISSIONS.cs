@@ -7,7 +7,7 @@ namespace IRRIGATIONDLL.Models
 {
 
     [Table("ROLEPERMISSIONS")]
-    public partial class ROLEPERMISSIONS
+    public partial class ROLEPERMISSIONS : PARENTENTITY
     {
         public ROLEPERMISSIONS()
         {

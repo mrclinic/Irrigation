@@ -27,5 +27,11 @@
         public decimal GOVId { get; set; }
         [ForeignKey("GOVId")]
         public virtual GOVERNORATE GOVERNORATE { get; set; }
+
+        [DisplayName("المنطقة")]
+
+        public decimal? ZONEId { get; set; }
+        [ForeignKey("ZONEId")]
+        public virtual ZONE ZONE { get; set; }
     }
 }

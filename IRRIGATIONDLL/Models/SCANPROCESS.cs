@@ -60,7 +60,7 @@ namespace IRRIGATIONDLL.Models
         [ForeignKey("ZONEId")]
         public virtual ZONE ZONE { get; set; }
 
-        //الفرع
+        //فرع المصرف
         public decimal BBRANCHId { get; set; }
         [ForeignKey("BBRANCHId")]
         public virtual BBRANCH BBRANCH { get; set; }

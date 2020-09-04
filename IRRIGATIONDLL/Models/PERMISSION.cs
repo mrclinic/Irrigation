@@ -7,7 +7,7 @@ namespace IRRIGATIONDLL.Models
 {
 
     [Table("PERMISSION")]
-    public partial class PERMISSION
+    public partial class PERMISSION : PARENTENTITY
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
