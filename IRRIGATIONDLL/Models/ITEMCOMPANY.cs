@@ -22,6 +22,8 @@ namespace IRRIGATIONDLL.Models
 
         [DisplayName("رمز الشركة)")]
         public decimal COMPId { get; set; }
+        [ForeignKey("COMPId")]
+        public virtual COMPANY COMPANY { get; set; }
 
 
         [DisplayName("مواصفات)")]

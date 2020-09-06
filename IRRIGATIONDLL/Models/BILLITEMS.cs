@@ -18,6 +18,8 @@
         public decimal Id { get; set; }
         [DisplayName("رقم الفاتورة")]
         public decimal BILLId { get; set; }
+        [ForeignKey("BILLId")]
+        public virtual BILLS BILLS { get; set; }
 
         [DisplayName("بيان المادة")]
         public decimal ITEMId { get; set; }
