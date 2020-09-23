@@ -30,9 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="IRRIGATIONDLL">
-      <HintPath>..\IRRIGATIONDLL\bin\Debug\netcoreapp2.2\IRRIGATIONDLL.dll</HintPath>
-    </Reference>
     <Reference Include="Kendo.Mvc">
       <HintPath>C:\Users\ASUS\Downloads\Kendo.Mvc.dll</HintPath>
     </Reference>
@@ -42,6 +39,10 @@
     <Folder Include="Areas\IRRIGATION\Data\" />
     <Folder Include="Areas\IRRIGATION\Models\" />
     <Folder Include="Areas\IRRIGATION\Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IRRIGATIONDLL\IRRIGATIONDLL.csproj" />
   </ItemGroup>
 
 </Project>

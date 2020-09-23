@@ -4953,6 +4953,21 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "IRRIGATIONDLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Proxies": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4",
+          "Oracle.EntityFrameworkCore": "2.19.30"
+        },
+        "compile": {
+          "bin/placeholder/IRRIGATIONDLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IRRIGATIONDLL.dll": {}
+        }
       }
     }
   },
@@ -13584,10 +13599,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "IRRIGATIONDLL/1.0.0": {
+      "type": "project",
+      "path": "../IRRIGATIONDLL/IRRIGATIONDLL.csproj",
+      "msbuildProject": "../IRRIGATIONDLL/IRRIGATIONDLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "IRRIGATIONDLL >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Proxies >= 2.2.0",
@@ -13604,11 +13625,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONAPP\\IRRIGATIONAPP.csproj",
+      "projectUniqueName": "D:\\HIAST\\Applications\\IRRIGATIONAPP\\mrclinic\\Irrigation\\IRRIGATIONAPP\\IRRIGATIONAPP.csproj",
       "projectName": "IRRIGATIONAPP",
-      "projectPath": "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONAPP\\IRRIGATIONAPP.csproj",
+      "projectPath": "D:\\HIAST\\Applications\\IRRIGATIONAPP\\mrclinic\\Irrigation\\IRRIGATIONAPP\\IRRIGATIONAPP.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\HIAST\\Applications\\Irrigation\\rep\\IRRIGATIONAPP\\obj\\",
+      "outputPath": "D:\\HIAST\\Applications\\IRRIGATIONAPP\\mrclinic\\Irrigation\\IRRIGATIONAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13626,7 +13647,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\HIAST\\Applications\\IRRIGATIONAPP\\mrclinic\\Irrigation\\IRRIGATIONDLL\\IRRIGATIONDLL.csproj": {
+              "projectPath": "D:\\HIAST\\Applications\\IRRIGATIONAPP\\mrclinic\\Irrigation\\IRRIGATIONDLL\\IRRIGATIONDLL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
