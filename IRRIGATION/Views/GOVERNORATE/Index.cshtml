@@ -1,0 +1,77 @@
+﻿
+@{ ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1>Index</h1>
+@(Html.Kendo().Grid<IRRIGATIONDLL.Models.GOVERNORATE>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(c => c.NAME).Width(140);
+            columns.Bound(c => c.ORDER).Width(190);
+            columns.Command(command =>
+            {
+
+                command.Edit().Text("<span class='glyphicon glyphicon-pencil'></span>").CancelText(" ").UpdateText(" ").HtmlAttributes(new { style = "min-width:40px; !important" });
+
+                command.Destroy().Text("<span class='glyphicon glyphicon-remove'></span>").HtmlAttributes(new { style = "min-width:40px; !important" });
+            }).Width(150);
+
+        })
+        .ToolBar(toolbar =>
+        {
+            toolbar.Create();
+            toolbar.Excel();
+            toolbar.Pdf();
+        })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("GOVERNORATE_Read", "GOVERNORATE"))
+            .Create(create => create.Action("GOVERNORATE_Create", "GOVERNORATE"))
+            .Update(update => update.Action("GOVERNORATE_", "GOVERNORATE"))
+            .Destroy(destroy => destroy.Action("GOVERNORATE_Destroy", "GOVERNORATE"))
+        )
+        .Editable(editable => editable.Mode(GridEditMode.PopUp)
+                                     .DisplayDeleteConfirmation("هل أنت متأكد؟").CancelDelete("إلغاء").ConfirmDelete("نعم")
+                                     .Window(w => w.Draggable()
+                                                .Modal(true)
+                                                .Title("تعديل")
+                                                .Resizable()
+                                            )
+        )
+        .Filterable(filterable => filterable
+        .Extra(false)
+        .Operators(operators => operators
+            .ForString(str => str.Clear()
+                .IsEqualTo("يساوي")
+                .IsNotEqualTo("لا يساوي")
+                .Contains("يحتوي")
+                .StartsWith("تبدأ ب")
+                .EndsWith("ينتهي ب")
+            )
+            .ForNumber(st => st.Clear()
+            .IsEqualTo("يساوي")
+            .IsNotEqualTo("لا يساوي")
+            .IsGreaterThan("أكبر تماماً")
+            .IsGreaterThanOrEqualTo("أكبر أو يساوي")
+           .IsLessThan("أصغر تماماً")
+           .IsLessThanOrEqualTo("أصغر أو يساوي")
+            )
+            .ForEnums(st => st.Clear()
+            .IsEqualTo("يساوي")
+            .IsNotEqualTo("لا يساوي")
+            )
+            .ForDate(st => st.Clear()
+            .IsEqualTo("يساوي")
+            .IsNotEqualTo("لا يساوي")
+            .IsGreaterThan("أكبر تماماً")
+            .IsGreaterThanOrEqualTo("أكبر أو يساوي")
+           .IsLessThan("أصغر تماماً")
+           .IsLessThanOrEqualTo("أصغر أو يساوي")
+
+            )
+
+            )
+            )
+      .Scrollable()
+    )
