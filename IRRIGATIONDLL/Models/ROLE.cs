@@ -12,7 +12,7 @@ namespace IRRIGATIONDLL.Models
         {
             USERS = new HashSet<USER>();
         }
-
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal Id { get; set; }

@@ -12,6 +12,7 @@
         public DOCTYPES() {
             
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف)")]

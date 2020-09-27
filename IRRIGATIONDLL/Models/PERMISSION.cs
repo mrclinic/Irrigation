@@ -9,6 +9,7 @@ namespace IRRIGATIONDLL.Models
     [Table("PERMISSION")]
     public partial class PERMISSION : PARENTENTITY
     {
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal Id { get; set; }

@@ -14,6 +14,7 @@
             SANCTION = new HashSet<SANCTION>();
             DECISION = new HashSet<DECISION>();
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف الشركة)")]

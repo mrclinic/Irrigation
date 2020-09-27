@@ -11,6 +11,7 @@
         public FINCOND() {
             CREATION_DATE = DateTime.Now;
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف شرط أنواع التمويل)")]

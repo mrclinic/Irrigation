@@ -13,7 +13,7 @@
             CREATION_DATE = DateTime.Now;
             CREDITHISTORY = new HashSet<CREDITHISTORY>();
         }
-
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف الاعتمادات )")]

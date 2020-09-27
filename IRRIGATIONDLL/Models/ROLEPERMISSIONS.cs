@@ -12,6 +12,7 @@ namespace IRRIGATIONDLL.Models
         public ROLEPERMISSIONS()
         {
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal Id { get; set; }

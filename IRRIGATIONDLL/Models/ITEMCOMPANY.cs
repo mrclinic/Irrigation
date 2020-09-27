@@ -13,6 +13,7 @@ namespace IRRIGATIONDLL.Models
         public ITEMCOMPANY() {
             
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف)")]

@@ -12,6 +12,7 @@ namespace IRRIGATIONDLL.Models
         public DOCS() {
             
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف")]

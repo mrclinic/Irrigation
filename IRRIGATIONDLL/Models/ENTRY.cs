@@ -13,6 +13,7 @@
             CREATION_DATE = DateTime.Now;
             ENTRYDETAILS = new HashSet<ENTRYDETAILS>();
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف)")]

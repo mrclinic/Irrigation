@@ -8,6 +8,7 @@ namespace IRRIGATIONDLL.Models
     public partial class LOGERR
     {
         //ÌÏæá ÇáÃÎØÇÁ
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal Id { get; set; }

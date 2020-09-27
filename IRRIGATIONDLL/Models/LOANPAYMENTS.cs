@@ -12,6 +12,7 @@
         public LOANPAYMENTS() {
             
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف")]

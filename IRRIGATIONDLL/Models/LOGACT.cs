@@ -9,7 +9,7 @@ namespace IRRIGATIONDLL.Models
     public partial class LOGACT
     {
         //ÃœÊ· «·„—«ﬁ»…
-
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal Id { get; set; }

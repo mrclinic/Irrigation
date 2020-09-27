@@ -8,6 +8,7 @@ namespace IRRIGATIONDLL.Models
     [Table("USER")]
     public partial class USER : PARENTENTITY
     {
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal Id { get; set; }

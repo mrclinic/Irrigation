@@ -10,6 +10,7 @@
         public PRODUCT() {
             CREATION_DATE = DateTime.Now;
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف المنتج)")]

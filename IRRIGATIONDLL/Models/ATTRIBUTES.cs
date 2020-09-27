@@ -12,6 +12,7 @@
         public ATTRIBUTES() {
             
         }
+        [ScaffoldColumn(false)]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("رقم معرف)")]
